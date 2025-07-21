@@ -1,0 +1,686 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Welcome to my Portfolio</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(84, 72, 49, 0.08); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="971c8b41-7e82-43fc-bd65-0e51f5385d54" class="page sans"><header><img class="page-cover-image" src="Screenshot_2023-10-18_131952.jpg" style="object-position:center 40.2%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">💐</span></div><h1 class="page-title">Welcome to my Portfolio</h1><p class="page-description"></p></header><div class="page-body"><p id="6c83a120-fdb1-421e-ab1e-7030aaad98ce" class="block-color-blue"><strong>About Me</strong></p><p id="80175d89-7af2-4469-b21d-a330d1bf464e" class="">   <strong>Hello, my name is Nanthawan Plaengratsami (Ice). I am a fourth-year undergraduate student.<br/>at King Mongkut&#x27;s University of Technology Thonburi, majoring in Information Technology (IT).<br/>I am interested in a Cloud Engineer, Data Science, and Backend Developer position. Likes to learn and explore various aspects and is always ready. Be open to engaging with the world around you without hesitation.<br/></strong></p><blockquote id="090756b1-8099-4393-8e67-6c887f9a0b87" class="block-color-blue"><strong>Link My Website:</strong> <strong> </strong><strong><a href="https://linktr.ee/nanthawan.pran">https://linktr.ee/nanthawan.pran</a></strong></blockquote><hr id="ae14ca66-1d3a-4360-bf74-e673431f68d0"/><h1 id="5dac9736-78d8-456a-8978-68774b65524e" class="block-color-blue_background">                              <strong>Experiences &amp; Working</strong></h1><h2 id="1e180739-ffe0-808b-a0e3-e31d7d456ef1" class="block-color-orange">Welcome to KMUTT-Compare</h2><p id="1e180739-ffe0-8064-8424-c98f226cf5a3" class="block-color-yellow_background">Senior Project 4th-year IT student                                                                                              <strong>Sep 2024 - May 2025</strong></p><p id="1e180739-ffe0-80d0-bdac-e8ad3de16cec" class="">  This is my senior project, for which we can freely decide on the topic to suit my needs. It is a group project that involves creating a website to search, compare and book accommodation around the university.<br/>KMUTT-Compare involves identity this means Authentication, Authorization and security checked.<br/><br/><strong>I am responsible for the Backend (Java), design and managed database (MongoDB) </strong>of this project.</p><h3 id="1e180739-ffe0-800e-a2cc-d29034fbfbd8" class="">🏡 Home Page</h3><figure id="1e180739-ffe0-8041-8710-cb50f9b16011" class="image"><a href="image.png"><img style="width:709.9874877929688px" src="image.png"/></a></figure><h3 id="1e180739-ffe0-8010-880a-ee046da169ce" class="">📜 Dormitory Details</h3><figure id="1e180739-ffe0-807d-ae85-cb990dec73c5" class="image"><a href="image%201.png"><img style="width:709.9874877929688px" src="image%201.png"/></a></figure><h3 id="1e180739-ffe0-809f-a231-de003747d714" class="">👑 Dashboard (admin role)</h3><p id="1e180739-ffe0-8078-b92c-d8388246b825" class="">This page of <strong>Admin</strong> <strong>role</strong> for<strong> </strong>tracking <strong>all users</strong>, <strong>active users</strong> and <strong>dormitories</strong> management.<br/>Admin can edit and manage both of dormitories and users information.<br/></p><figure id="1e180739-ffe0-80d4-898f-d355ecadbd80" class="image"><a href="image%202.png"><img style="width:709.9750366210938px" src="image%202.png"/></a></figure><h3 id="1e180739-ffe0-8019-a4d7-f0d615ed5b48" class="">✨Core Features ✨</h3><p id="1e180739-ffe0-804c-af8e-d1eded1b15ee" class=""><strong>Compare Dormitories: <br/><br/></strong>Our website provides a service function for searching dormitories, and this is one of the <strong>key features</strong> <br/>that allows users to <br/><strong>compare the dormitories</strong> they have found conveniently.</p><figure id="1e180739-ffe0-808b-aede-c831f62bbd6d" class="image"><a href="image%203.png"><img style="width:709.9750366210938px" src="image%203.png"/></a></figure><p id="1e180739-ffe0-80db-bc93-f0ff6e7631e7" class=""><strong>Google Map: <br/><br/></strong>Our map feature helps compare dormitories by showing their <strong>exact locations</strong>, nearby areas, <br/>and routes from KMUTT — making it easier to choose the right one.<br/></p><figure id="1e180739-ffe0-8055-8488-ce2e3b70122b" class="image"><a href="image%204.png"><img style="width:709.9750366210938px" src="image%204.png"/></a></figure><p id="1e180739-ffe0-80df-8e70-eae8d070e8f7" class=""><strong>Book Dormitory: <br/><br/></strong>When users decide to choose a dormitory, they can make a <strong>reservation</strong> directly through the <strong>form </strong>on the website. The system will then send a notification to the dormitory owner via email.</p><figure id="1e180739-ffe0-803a-9e22-ca0ea795c30a" class="image"><a href="image%205.png"><img style="width:709.9750366210938px" src="image%205.png"/></a></figure><p id="1e180739-ffe0-807c-bbc1-fec06953a92b" class=""><strong>Favorite Dormitory: <br/><br/></strong>User(s) can <strong>press heart icon</strong> 💟 when like the dormitories, after that the dormitories will record <br/>to favorite dormitory page. But when user(s) don’t like the exists dormitories, user(s) can press bin icon <br/>for “<br/><strong>unlike</strong>” that dormitories. 👍🏻</p><figure id="1e180739-ffe0-80ef-8de4-c42591b7fe75" class="image"><a href="image%206.png"><img style="width:709.9750366210938px" src="image%206.png"/></a></figure><figure id="1e180739-ffe0-8065-89a7-d5eb663c6dd1" class="image"><a href="image%207.png"><img style="width:709.9874877929688px" src="image%207.png"/></a></figure><p id="1e180739-ffe0-801b-8644-dcaac8ed14c9" class="">Let’s connect on the <strong>Link to the website</strong> and Let’s see<strong> </strong>if would be exciting 😁</p><hr id="1e180739-ffe0-8085-b7b9-c1e8af2324ef"/><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="1e180739-ffe0-804a-b66c-e1c2b2f13ca7"><div style="font-size:1.5em"><span class="icon">🏠</span></div><div style="width:100%"><a href="https://kmutt-compare.sit.kmutt.ac.th/">https://kmutt-compare.sit.kmutt.ac.th/</a></div></figure><h2 id="e1d058c9-127c-409c-9f75-d26a4e29e3b2" class="block-color-orange">Welcome to Integrated Project</h2><p id="e96a72c5-e611-4491-9848-2eb244cb4c3e" class="block-color-yellow_background">SIT Announcement System                                                                                                                 <strong>Jan 2023 - 2024</strong></p><p id="5a3f3627-c469-47f4-af70-75c55066adb8" class="">  This is my first Big project. This is a Group project related to creating a news announcement website by applying knowledge from various coding courses: Java, JavaScript, Linux, and SQL.<br/><br/><strong>I am responsible for the Back-end and Database </strong>of the project.</p><figure id="ce2ea784-ca7d-4340-b8e3-22684c10aebe" class="image"><a href="Untitled.png"><img style="width:709.9750366210938px" src="Untitled.png"/></a></figure><p id="672514a3-565e-479e-b593-0388820c4e18" class="">      The first half of the year. We will start working on this project,<br/>It structures database design(ER diagram)<br/><strong> </strong>and Java coding to create a system for creating, adding, editing/updating, and deleting data and verifying its accuracy. Control connection to the database and must be deployed up to the web browser.</p><div id="cfba7f33-7e26-4900-92f9-a8f1d7d1f23a" class="column-list"><div id="d7b2bf43-a770-46d8-9939-287ae9506758" style="width:50%" class="column"><figure id="48591801-4fa7-4c36-8795-344fb404e016" class="image"><a href="Untitled%201.png"><img style="width:768px" src="Untitled%201.png"/></a><figcaption>Adding New Announcement Page </figcaption></figure><figure id="0af45a10-30f5-452a-94e9-08a7b7a88373" class="image"><a href="Untitled%202.png"><img style="width:1891px" src="Untitled%202.png"/></a><figcaption>Edit or Update the Announcement Page</figcaption></figure><p id="6c6c667b-4ebf-476f-90f8-698028600d9a" class="">
+</p></div><div id="01dff575-2d0a-49f7-ba13-e246acd974d1" style="width:50%" class="column"><figure id="aa8e7273-439b-4f25-9f74-64ba044e3148" class="image"><a href="Untitled%203.png"><img style="width:1908px" src="Untitled%203.png"/></a><figcaption>                                                                                          View Detail Announcement Page</figcaption></figure><figure id="c5730bee-11f2-4fff-a262-f468a8f81e3e" class="image"><a href="Untitled%204.png"><img style="width:331.9875183105469px" src="Untitled%204.png"/></a></figure></div></div><p id="ca585368-ded1-4e10-a251-29ed849ba8d8" class="">   In the second half of the year, user information was added to the database.<br/>Create a login system There is a system to authenticate users and assign access rights using tokens. To schedule more website usage.<br/></p><p id="c2840906-46d0-4cf7-a021-8065357e70ea" class="">Let’s connect on the <strong>Link to the website</strong> and Let’s see<strong> </strong>if would be exciting 😁</p><hr id="bd44c66f-326f-4b37-b9fa-73ff1de0e67c"/><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="d6b7edc1-3e5a-4bb4-b44a-802015a6b3df"><div style="font-size:1.5em"><span class="icon">📢</span></div><div style="width:100%"><a href="https://intproj22.sit.kmutt.ac.th/sy3/admin/announcement">https://intproj22.sit.kmutt.ac.th/sy3/admin/announcement</a></div></figure><h1 id="1b9925df-b9b3-4c87-9075-0e9eaa46a335" class="block-color-orange">Welcome to Front-End Project</h1><p id="d4668513-027c-493d-9021-8bfc8c072cdf" class="block-color-yellow_background">Game Develop from Avenger Team                                                                                                               <strong>Aug 2023</strong></p><figure id="00103506-2b5c-41d3-9102-208edc060320" class="image"><a href="Untitled%205.png"><img style="width:709.9874877929688px" src="Untitled%205.png"/></a></figure><p id="0b558222-98d4-43cb-89b7-ed3ec972f0b9" class="">This is group work. It&#x27;s a small project. Where we build games using JavaScript, CSS, HTML, and frameworks like Tailwind and Daisy. And must go out and present every 5 weeks about the various working systems of the game to teachers and friends. During the presentation, there will always be raising hands to ask questions and offer opinions.</p><div id="02ebff68-1e30-44aa-80e0-d8783afd52de" class="column-list"><div id="a1eee844-d759-4ced-b71f-48314b6e19fe" style="width:50%" class="column"><figure id="7ddc9199-3fc7-49ca-a342-8adfae1b18b8" class="image"><a href="Untitled%206.png"><img style="width:1896px" src="Untitled%206.png"/></a></figure></div><div id="951005f9-cac1-45ec-a0e4-cb54211827f9" style="width:50%" class="column"><figure id="eb6ad477-b3a8-4e38-8527-824612fe856e" class="image"><a href="Untitled%207.png"><img style="width:1917px" src="Untitled%207.png"/></a></figure></div></div><div id="5255bd58-faba-4e34-b897-7452e3eacc38" class="column-list"><div id="c598c66d-a953-4e9b-bc83-e2fcba4a41a3" style="width:50%" class="column"><figure id="29439263-2725-4c83-8daf-89e30abe8732" class="image"><a href="Untitled%208.png"><img style="width:1914px" src="Untitled%208.png"/></a></figure></div><div id="b0cb4807-f5db-4c09-8c56-ac9bbbbfc4a6" style="width:50%" class="column"><figure id="fbf09b84-1036-47ea-a5e3-4d8ffe32193d" class="image"><a href="Untitled%209.png"><img style="width:1912px" src="Untitled%209.png"/></a></figure></div></div><p id="e2ac7a9a-4bb0-4945-a8c2-17c11742cd60" class="">  The game will be a fun question-answer game. For example, the system in the game<br/>Such as a system for checking correct or incorrect answers, a hint system, a music system, etc.<br/></p><p id="5889d73f-3ece-48e9-abb0-c0591da2f861" class="">Let’s connect on the <strong>Link to the website</strong> and Let’s see<strong> </strong>if would be fun😁</p><hr id="7b889d94-b556-4336-b0b8-1a70054ca82a"/><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="647695fb-6d86-406a-96ae-b5c3a3ff5aa4"><div style="font-size:1.5em"><span class="icon">💟</span></div><div style="width:100%"><a href="https://avenger-project.netlify.app/">https://avenger-project.netlify.app/</a></div></figure><h1 id="23280739-ffe0-804c-b35f-e48cb8c5e616" class="block-color-orange">Marvel Character Showcase Website</h1><p id="23280739-ffe0-8035-b12b-ddb0b7ddcfdb" class="block-color-yellow_background"> Develop and Design My Hobby Website                                                                                                       <strong>Oct</strong> <strong>2021</strong></p><figure id="23280739-ffe0-80d6-88b2-d738a45ad1f7" class="image"><a href="image%208.png"><img style="width:709.9750366210938px" src="image%208.png"/></a></figure><p id="23280739-ffe0-8037-b256-cbaa4f300809" class="">  This is a small web project developed during my studies,<strong> showcasing main characters from Marvel movies</strong>.</p><p id="23280739-ffe0-8091-8d21-ffc62c5bdb54" class="">The website was built using fundamental front-end technologies including <strong>HTML CSS</strong>, and <strong>basic JavaScript</strong>.</p><p id="23280739-ffe0-80ab-bb54-ddd936ca4608" class="">  The goal was to create a user-friendly and visually appealing interface that functions smoothly and responds correctly across devices.</p><div id="23280739-ffe0-80f2-9d28-eefee8f00af4" class="column-list"><div id="23280739-ffe0-802e-a54f-fa40a45519f2" style="width:50%" class="column"><figure id="23280739-ffe0-8007-b79d-e70b487d0928" class="image"><a href="image%209.png"><img style="width:709.9874877929688px" src="image%209.png"/></a></figure><figure id="23280739-ffe0-8024-8ccd-dfe645342483" class="image"><a href="image%2010.png"><img style="width:1913px" src="image%2010.png"/></a></figure></div><div id="23280739-ffe0-8077-8126-c64700058dbf" style="width:50%" class="column"><figure id="23280739-ffe0-80a5-a052-fcaf0520e790" class="image"><a href="image%2011.png"><img style="width:1920px" src="image%2011.png"/></a></figure><figure id="23280739-ffe0-80c7-a65b-e7c0814a4625" class="image"><a href="image%2012.png"><img style="width:709.9750366210938px" src="image%2012.png"/></a></figure></div></div><p id="23280739-ffe0-80b2-b1af-d4279c74e8e2" class="">Let’s click on the <strong>Link to the website</strong> ☺</p><hr id="23280739-ffe0-80ec-bbcc-ce1bec31af4d"/><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="23280739-ffe0-8031-b72f-ea3fc518bb6b"><div style="font-size:1.5em"><span class="icon">📽️</span></div><div style="width:100%"><a href="https://nanthawan-marvel.netlify.app/">https://nanthawan-marvel.netlify.app/</a> </div></figure><h1 id="14c3517b-4473-4666-bb1c-060086868e91" class="block-color-orange">Welcome to UX-UI Project</h1><p id="648a5cfc-cb3a-4a42-bff4-dc68bd7ed257" class="block-color-yellow_background"> Design Flyover and Application                                                                                                  <strong> Oct 2021 - Feb 2022</strong></p><div id="221f5088-fbab-4e40-af1a-63a6b3b45570" class="column-list"><div id="ce86e17e-3a24-494b-acb6-58a95d3ee240" style="width:33.33333333333334%" class="column"><figure id="adc02cd4-ef42-44ea-891d-40fa14e006a8" class="image"><a href="Untitled%2010.png"><img style="width:205.97500610351562px" src="Untitled%2010.png"/></a></figure></div><div id="4914edc9-04c1-4398-b25e-eec1a40956a6" style="width:33.33333333333333%" class="column"><figure id="f3a42aaf-9338-4b2c-888a-ab4b441bab42" class="image"><a href="Untitled%2011.png"><img style="width:205.97500610351562px" src="Untitled%2011.png"/></a></figure></div><div id="ddcc8da2-61f5-490d-b081-a2df9a79e905" style="width:33.333333333333336%" class="column"><figure id="a9e0ba7c-a5af-4b1e-bd8d-0801b1348074" class="image"><a href="Untitled%2012.png"><img style="width:205.97500610351562px" src="Untitled%2012.png"/></a></figure></div></div><p id="70781332-2b14-4a30-856d-b3c2b4c443f4" class="">  This is a group project related to design. Architectural innovation of the future <strong>&quot;Flyovers&quot;</strong><br/>which has been surveyed to collect various types of information<br/>By conducting questionnaires and interviews to develop and improve the design of this project, including information about the needs of actual users.<br/>and used in <br/><strong>designing Applications</strong> to help facilitate the use of flyovers.</p><p id="4e65d7fc-e4f2-4a11-8739-df6cca721eae" class="">  This is a group project related to design. Architectural innovation of the future <strong>&quot;Flyovers&quot;</strong><br/>which has been surveyed to collect various types of information<br/>By conducting questionnaires and interviews to develop and improve the design of this project, including information about the needs of actual users.<br/>and used in <br/><strong>designing Applications</strong> to help facilitate the use of flyovers.</p><div id="e8c38ffa-8570-46a3-af91-f94baee655d9" class="column-list"><div id="df0863a4-d7bc-4adb-b963-2b17bb92b9a5" style="width:50%" class="column"><figure id="7b5d5b1a-19b6-457c-b814-69df2ba84e7a" class="image"><a href="Untitled%2013.png"><img style="width:331.9875183105469px" src="Untitled%2013.png"/></a></figure></div><div id="cc02a0c8-b784-41da-baa6-80c202e5654d" style="width:50%" class="column"><figure id="aabbdc74-e1d4-4ddc-a106-778e0233c2fa" class="image"><a href="Untitled%2014.png"><img style="width:331.9875183105469px" src="Untitled%2014.png"/></a></figure></div></div><p id="45f15ab7-beaf-4c18-8eed-72a257b609e9" class="">Let’s connect on the <strong>Link to the website</strong> and Let’s see<strong> </strong>if would be OMG😁</p><hr id="95c5c146-ffd7-4307-809a-27b84e451f16"/><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="be589203-ff5d-49f2-a33a-0e8d18fc5428"><div style="font-size:1.5em"><span class="icon">🚨</span></div><div style="width:100%"><a href="https://www.figma.com/proto/xMUvk0lb7ir4JAYq5itg8k/Moblie?node-id=95-24&amp;starting-point-node-id=139%3A135&amp;t=vlj2SQRZWPKAmTPb-1&amp;scaling=contain&amp;mode=design">https://www.figma.com/proto/xMUvk0lb7ir4JAYq5itg8k/Moblie?node-id=95-24&amp;starting-point-node-id=139%3A135&amp;t=vlj2SQRZWPKAmTPb-1&amp;scaling=contain&amp;mode=design</a></div></figure><h1 id="c012f208-d932-49fd-8ed1-e7a7287d2888" class="block-color-orange">Welcome to Data Analyst Project</h1><p id="59ffaaf2-1f2c-420d-b913-7ae8286b3871" class="block-color-yellow_background">Search and Analyst of Data                                                                                                            <strong>                Nov 2022</strong></p><p id="db421b74-b791-4a85-905a-14067f281dbb" class="">      This is a small project. Analyzing the number of views on the Netflix platform business.<br/>which is a platform that is gaining strength and had the opportunity to study the basic business model that In addition to movie entertainment services, there are others such as series and documentaries.<br/></p><figure id="e09fdb8b-f205-48a4-8c3d-033e7c5c20e3" class="image"><a href="Untitled%2015.png"><img style="width:709.9874877929688px" src="Untitled%2015.png"/></a></figure><p id="8d7a4f7c-61fc-4120-8f10-207dc8da3b7c" class="">which searches for data and collects it for use in various forms of analysis Examples of data include movie names, movie genres, year of release, country of movie production, etc. and are used to analyze these data using the Excel program and there are various data analysis methods, Including forecasting future data values.</p><figure id="38e23f2c-03a5-4fd9-9fb1-969fa8843ace" class="image"><a href="Untitled%2016.png"><img style="width:709.9750366210938px" src="Untitled%2016.png"/></a><figcaption>                                            Calculate various values such as average, maximum, minimum, etc.</figcaption></figure><figure id="c5c0fa77-113f-4716-8aff-7518c0df8c5c" class="image"><a href="Untitled%2017.png"><img style="width:709.9750366210938px" src="Untitled%2017.png"/></a><figcaption>                                                      Configure data displayed by Bar graphs and Pie graphs.</figcaption></figure><figure id="fd333392-5780-4ed2-bfa3-49aa459000a0" class="image"><a href="Untitled%2018.png"><img style="width:709.9874877929688px" src="Untitled%2018.png"/></a><figcaption>                                                                 Calculated Relationship of Data and Analisis</figcaption></figure><figure id="18335b99-b7f3-4305-8953-a8d5f380ba5b" class="image"><a href="Untitled%2019.png"><img style="width:709.9874877929688px" src="Untitled%2019.png"/></a><figcaption>                                                                Random Data and Analysis </figcaption></figure><p id="a33a316c-0f07-4aff-9729-b28d7b502e36" class="">And on the last day of the project, there must be a presentation of information in front of the classroom. Let your friends and teachers listen. Before completing this project completely. 🎞👩🏻</p><p id="23280739-ffe0-8023-9ba5-e3a7d9e84d0d" class="">
+</p><p id="1e180739-ffe0-80ad-8b62-f1d66e0b3ce2" class="block-color-pink_background"><strong>Languages</strong></p><p id="1e180739-ffe0-80f0-90da-c39486a1da00" class="">🇹🇭 Thai language (native)<br/>🇬🇧 English language (good)<br/>🇨🇳 Chinese language (beginner)<br/></p><p id="23280739-ffe0-8000-928f-c4a6ef97725b" class="">
+</p><p id="1e180739-ffe0-8048-a0c3-e4d584d4a2a1" class="block-color-pink_background"><strong>Programming Languages</strong></p><div id="23280739-ffe0-8029-9647-f97b5437c64b" class="column-list"><div id="23280739-ffe0-80c0-b89a-fbdc36b62174" style="width:28.125%" class="column"><p id="23280739-ffe0-80f0-9f02-f5bf50b6682c" class=""><strong>Frontend</strong></p><p id="23280739-ffe0-807c-a341-ffc9a1df322c" class="">HTML</p><p id="23280739-ffe0-80d0-a319-fd91aa6e6db1" class="">CSS</p><p id="23280739-ffe0-8030-97cb-e4d8c646db70" class="">JavaScript<br/>-Vue.js<br/>-Tailwind CSS<br/>-Daisy UI<br/></p></div><div id="23280739-ffe0-8006-870c-c7115f06a424" style="width:21.874999999999996%" class="column"><p id="23280739-ffe0-803b-ad7d-d15be5c305c5" class=""><strong>Backend</strong></p><p id="23280739-ffe0-80f5-8292-e253325affd1" class="">Java<br/>-Spring Boot<br/>-Servlets<br/></p><p id="23280739-ffe0-80b5-8f16-e4e2235523fb" class="">Python (Beginner)</p></div><div id="23280739-ffe0-809b-8c2c-d96e0a30281d" style="width:25%" class="column"><p id="23280739-ffe0-80d9-b9cf-f28c2d019c97" class=""><strong>Database</strong></p><p id="23280739-ffe0-80e2-bf38-cbb356efd75c" class="">SQL</p><p id="23280739-ffe0-80fa-b50e-fea1838367f9" class="">NoSQL</p></div><div id="23280739-ffe0-802e-8983-f28485f27918" style="width:25%" class="column"><p id="23280739-ffe0-8052-960f-c740ac1d7ff7" class=""><strong>DevOps</strong></p><p id="23280739-ffe0-8070-a37d-f83389357be0" class="">Linux commands</p><p id="23280739-ffe0-800c-a95e-ff125bf694cc" class="">Docker commands</p></div></div><div id="514b29a1-f63c-4375-ae74-62cb9783deaf" class="column-list"><div id="fbf7c143-b545-4023-af33-bbe65c3d48ca" style="width:33.33333333333333%" class="column"><p id="7eab2ec7-7f10-4b45-b769-1f6bfbb4596a" class="block-color-purple_background"><strong>Skills and Abilities</strong></p><p id="f073a228-abb1-4115-ad7b-a0e098d6743e" class="">Adaptable</p><p id="49a26a0b-bafc-4ee5-ac8e-987d954f2e5a" class="">Attentive listener</p><p id="a3831f6c-4537-4b28-9f73-a2a6b79804ed" class="">Teamwork</p><p id="24b5337a-92ef-4c61-8232-2f8f9d3063a8" class="">Communication</p><p id="f8572c28-0078-4c55-a4b4-0c4fb9a5a152" class="">Critical thinking &amp; Problem Solving</p><p id="1e180739-ffe0-8010-aeed-f7a277b2bc24" class="">Time Management</p><p id="1afb92de-5767-4f1f-8efd-9e7468d3d421" class="">Basic Business Model</p><p id="23280739-ffe0-8094-a214-d21cd6b9cc3d" class="">
+</p></div><div id="10a31260-58ab-46c6-b2b6-482792724d4f" style="width:25%" class="column"><p id="1ae6f099-75d7-4391-8fc7-5fbba6558b06" class="block-color-blue_background"><strong>Tools</strong></p><p id="16f62582-988b-4243-a9c7-3e1a523b1087" class="">Visual Studio Code</p><p id="b25cff1e-49e1-45fb-9aa8-3e7f7522ec71" class="">IntelliJ</p><p id="1e180739-ffe0-808a-86c7-cfc81d4e406a" class="">Postman</p><p id="1e180739-ffe0-803e-87be-c091df37da63" class="">Kubernetes</p><p id="1e180739-ffe0-80ac-b426-d2429c91718b" class="">Rancher</p><p id="1e180739-ffe0-80ee-bb54-f2a921613b1b" class="">Moon modeler</p><p id="d9111c7b-f11e-43cf-b4f3-f21c2c10ece1" class="">MySQL Workbench</p><p id="1e180739-ffe0-8033-a465-ee4fbb28ff48" class="">MongoDB</p><p id="1e180739-ffe0-801d-86e9-fe3505fcc8a4" class="">Oracle</p><p id="1f880739-ffe0-80f9-8fcd-c717a372ac62" class="">SQLite</p><p id="05e624ad-f28d-48f4-bb12-82966a5c5754" class="">Microsoft Offices</p><p id="00646fb2-140d-4f59-bcf0-d74a9e93aac1" class="">Figma</p><p id="b973f869-fc80-430e-bc38-0f5e36423d0c" class="">GitHub</p><p id="23280739-ffe0-800f-b97c-c021d6e8cc67" class=""><strong>Cloud Platform</strong>: Azure</p></div><div id="2dd0aac3-32aa-4f6b-bad2-a7ec1d10713a" style="width:41.66666666666665%" class="column"><p id="8f288617-f842-4f7e-a69b-49668f34e2c2" class="block-color-teal_background"><strong>Contacts</strong></p><p id="34119750-313f-4b74-a8cc-f75e30bd2e76" class="">📱 083 062 5993</p><p id="a0a2b8fd-4bb9-47c4-9da6-437d32747d09" class="">💌 nanthawan.pran@gmail.com</p><p id="c09be8d1-c76d-4a88-aa88-9e28ca0dee3b" class="">💙 Facebook:  Nanthawan ice </p><p id="2779d9f4-7221-4fd5-96fc-e57458ac6eee" class="">💚 Line ID: ice3146</p><p id="1e180739-ffe0-808d-bd23-fe2025f46751" class="">
+</p></div></div><h2 id="0f2ae318-4103-4f41-a180-1647c933bc79" class="">                           ✨- Thank You so much -✨</h2><p id="d124f3ab-9505-42a3-aaeb-ff57efd859c4" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
